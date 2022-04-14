@@ -2,11 +2,6 @@ import React, { ChangeEvent, FormEvent, useState } from "react";
 import { Errors, User } from "../Interfaces";
 import { validate } from "../validate";
 
-// type Props = {
-//     username:string
-//     email:string
-//     password:string
-// }
 
 export default function Form() {
   let userData: User = { username: "", email: "", password: "" };
