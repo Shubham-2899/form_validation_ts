@@ -7,7 +7,7 @@ export default function Form() {
   let userData: User = { username: "", email: "", password: "" };
   const [success, setSuccess] = useState(false);
   const [user, setUser] = useState<User>(userData);
-  const [formErrors, setFormErrors] = useState<Errors>({} as Errors); //type assertion
+  const [formErrors, setFormErrors] = useState<Errors>({} as Errors); 
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
@@ -23,9 +23,7 @@ export default function Form() {
 
   return (
     <div className="form-container">
-      {success &&
-      formErrors.emailError.length === 0 &&
-      formErrors.passwordError.length === 0 ? (
+      {success &&  formErrors.emailError.length === 0 && formErrors.passwordError.length === 0 ? (
         <div className="success-message">
           Success ! Thank you for Registration{" "}
         </div>
